@@ -8,6 +8,13 @@ Level::Level(sf::RenderWindow* hwnd, Input* in, GameState* gs,sf::View* v, World
 	world = w;	
 	tileManager = tm;
 	audioManager = new AudioManager();
+	world->AddGameObject(zomb);
+
+	world->AddGameObject(mario);
+
+	mario.setInput(in);
+	zomb.setInput(in);
+
 }
 
 Level::~Level()
@@ -24,6 +31,7 @@ Level::~Level()
 		audioManager = nullptr;
 	}
 }
+	
 
 void Level::handleInput(float dt)
 {
@@ -36,12 +44,16 @@ void Level::handleInput(float dt)
 		input->setKeyUp(sf::Keyboard::Tab);
 		gameState->setCurrentState(State::TILEEDITOR);
 	}
+
+	zomb.handleInput(dt);
+	mario.handleInput(dt);
 }
 
 // Update game objects
 void Level::update(float dt)
 {
-
+	zomb.update(dt);
+	mario.update(dt);
 	//Move the view to follow the player
 	//view->setCenter(view->getCenter().x, 360);
 	//
@@ -58,7 +70,9 @@ void Level::render()
 	{
 		tileManager->render(false);
 	}
+	window->draw(zomb);
 
+	window->draw(mario);
 }
 
 
