@@ -2,6 +2,8 @@
 
 Mario::Mario()
 {
+
+	setTag("Player");
 	marioSpriteSheet.loadFromFile("gfx/MarioSheetT.png");
 	setSize(sf::Vector2f(15*4, 21*4));
 	setPosition(400, 100);
@@ -73,6 +75,7 @@ void Mario::handleInput(float dt)
 	if (input->isKeyDown(sf::Keyboard::Space) && canJump) 
 	{
 		Jump(100.f);
+		audio->playSoundbyName("jump");
 	}
 	currentAnimation->animate(dt);
 }

@@ -136,6 +136,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Background.cpp" />
     <ClCompile Include="Candle\Color.cpp" />
     <ClCompile Include="Candle\Constants.cpp" />
     <ClCompile Include="Candle\DirectedLight.cpp" />
@@ -161,6 +162,7 @@
     <ClCompile Include="Framework\Tiles.cpp" />
     <ClCompile Include="Framework\Vector.cpp" />
     <ClCompile Include="Framework\World.cpp" />
+    <ClCompile Include="Hills.cpp" />
     <ClCompile Include="imgui\imgui-SFML.cpp" />
     <ClCompile Include="imgui\imgui.cpp" />
     <ClCompile Include="imgui\imgui_draw.cpp" />
@@ -172,6 +174,7 @@
     <ClCompile Include="Zombie.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Background.h" />
     <ClInclude Include="Candle\Candle.hpp" />
     <ClInclude Include="Candle\Color.hpp" />
     <ClInclude Include="Candle\Constants.hpp" />
@@ -203,6 +206,7 @@
     <ClInclude Include="Framework\Utilities.h" />
     <ClInclude Include="Framework\Vector.h" />
     <ClInclude Include="Framework\World.h" />
+    <ClInclude Include="Hills.h" />
     <ClInclude Include="imgui\imconfig-SFML.h" />
     <ClInclude Include="imgui\imconfig.h" />
     <ClInclude Include="imgui\imgui-SFML.h" />

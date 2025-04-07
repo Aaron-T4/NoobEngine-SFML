@@ -11,6 +11,7 @@
 #include <iostream>
 #include "Zombie.h"
 #include "Mario.h"
+#include "Background.h"
 
 
 class Level : public BaseLevel{
@@ -28,4 +29,5 @@ private:
 
 	Zombie zomb;
 	Mario mario;
+	Background bg;
 };
